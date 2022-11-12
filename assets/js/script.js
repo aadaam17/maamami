@@ -70,7 +70,9 @@ themeToggleBtn.addEventListener("click", function () {
 // Swiper
 const swiper = new Swiper(".swiper", {
   // How many slides to show
-  slidesPerView: 1,
+  slidesPerView: "auto",
+  // For free slides
+  freeMode: true,
   // How much space between slides
   spaceBetween: 20,
   // Make the next and previous buttons work
@@ -100,6 +102,8 @@ const swiper = new Swiper(".swiper", {
 const swiper2 = new Swiper(".swiper-2", {
   // How many slides to show
   slidesPerView: 2,
+  // For free scroll
+  freeMode: true,
   // How much space between slides
   spaceBetween: 20,
   // Make the next and previous buttons work
@@ -109,7 +113,7 @@ const swiper2 = new Swiper(".swiper-2", {
   },
   // Make the pagination indicators work
   pagination: {
-      el: '.swiper-pagination-2'
+      el: '.swiper-pagination-3'
   },
   //Responsive breakpoints for how many slides to show at that view
   breakpoints: {

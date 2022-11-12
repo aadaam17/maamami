@@ -425,17 +425,17 @@ button.white {
 /* Featured */
 .featured-products {
   padding-block: 2rem;
-  margin: 2rem 2rem;
+  margin: 2rem;
 }
 
 .featured-products .products {
-  width: 100%;
+  width: 80%;
   min-width: 2rem;
-  padding: 1rem 1rem;
-  border: 0.1rem solid var(--light-color-alt);
+  /*padding: 1rem 1rem;*/
+  /*border: 0.1rem solid var(--light-color-alt);*/
   cursor: pointer;
   box-shadow: 2rem 2rem 3rem rgba(0, 0, 0, 0.02);
-  margin: 1.5rem 0;
+  margin: 1.5rem auto;
   transition: 0.2s ease;
   position: relative;
 }
