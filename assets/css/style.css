@@ -72,8 +72,7 @@ button {
 }
 
 i {
-  font-size: 2rem;
-  font-weight: 900;
+  font-size: var(--font-size-md);
 }
 
 /* Theme color change */
