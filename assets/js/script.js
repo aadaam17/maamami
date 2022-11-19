@@ -45,6 +45,22 @@ window.addEventListener("keyup", (event) => {
   if (event.key === "Escape") searchContainer.classList.remove("activated");
 });
 
+// Opening and Closing Sub Menu
+// New Featured
+const subMenu1 = selectElement("#sub-menu-1");
+const linkList1 = selectElement("#list-link-1");
+const closeListBtn = selectElement("#close-list-btn")
+
+linkList1.addEventListener("click", () => {
+  subMenu1.classList.add("activated")
+  menuToggleIcon.classList.add("deactivated");
+});
+
+closeListBtn.addEventListener("click", () => {
+  subMenu1.classList.remove("activated")
+  menuToggleIcon.classList.remove("deactivated")
+});
+
 // Switch theme/add to local storage
 const body = document.body;
 const themeToggleBtn = selectElement("#theme-toggle-btn");
@@ -77,24 +93,24 @@ const swiper = new Swiper(".swiper", {
   spaceBetween: 20,
   // Make the next and previous buttons work
   navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
   },
   // Make the pagination indicators work
   pagination: {
-      el: '.swiper-pagination'
+    el: '.swiper-pagination'
   },
   //Responsive breakpoints for how many slides to show at that view
   breakpoints: {
-      // 700px and up shoes 2 slides
-      700: {
-        slidesPerView: 2
-      },
-      // 1200px and up shoes 3 slides
-      1200: {
-          slidesPerView: 3
-      }
-  }   
+    // 700px and up shoes 2 slides
+    700: {
+      slidesPerView: 2
+    },
+    // 1200px and up shoes 3 slides
+    1200: {
+      slidesPerView: 3
+    }
+  }
 });
 
 
@@ -108,22 +124,22 @@ const swiper2 = new Swiper(".swiper-2", {
   spaceBetween: 20,
   // Make the next and previous buttons work
   navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
   },
   // Make the pagination indicators work
   pagination: {
-      el: '.swiper-pagination-3'
+    el: '.swiper-pagination-3'
   },
   //Responsive breakpoints for how many slides to show at that view
   breakpoints: {
-      // 700px and up shoes 2 slides
-      700: {
-        slidesPerView: 2
-      },
-      // 1200px and up shoes 3 slides
-      1200: {
-          slidesPerView: 3
-      }
-  }   
+    // 700px and up shoes 2 slides
+    700: {
+      slidesPerView: 2
+    },
+    // 1200px and up shoes 3 slides
+    1200: {
+      slidesPerView: 3
+    }
+  }
 });
