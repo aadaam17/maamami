@@ -104,6 +104,20 @@ body.dark-theme {
   margin-top: 5rem;
 }
 
+.noSelect {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.noSelect:focus {
+  outline: none !important;
+}
+
 /* .section:not(.featured-products) {
   padding-block: 5rem;
 } */
@@ -193,7 +207,7 @@ button.white {
   justify-content: flex-start;
   position: absolute;
   top: 8rem;
-  right: -30rem;
+  right: -50rem;
   height: 100vh;
   width: 30rem;
   padding: 3rem 3rem 0 3rem;
@@ -301,7 +315,12 @@ button.white {
 }
 
 .menu.activated,
-#sub-menu-1.activated {
+#sub-menu-1.activated,
+#sub-menu-2.activated,
+#sub-menu-3.activated,
+#sub-menu-4.activated,
+#sub-menu-5.activated,
+#sub-menu-6.activated {
   box-shadow: 1px 1px 1rem var(--transparent-light-color);
   right: 0;
   /*opacity: 1;
@@ -401,7 +420,7 @@ button.white {
 /* Hero */
 .hero {
   margin-top: 6.6rem;
-  background-image: url(/assets/img/hero4.png);
+  background-image: url("/assets/img/hero4.png");
   height: 60vh;
   width: 100%;
   background-size: cover;
@@ -419,7 +438,7 @@ button.white {
 }
 
 .hero button {
-  background-image: url(/assets/img/button.png);
+  background-image: url("/assets/img/button.png");
   background-color: transparent;
   border: 0;
   padding: 1.4rem 8rem 1.4rem 6.5rem;
@@ -427,6 +446,10 @@ button.white {
   cursor: pointer;
   font-weight: 700;
   font-size: 1.5rem;
+}
+
+.hero button:active {
+  color: #088178;
 }
 
 /* Popular Tags */
@@ -484,7 +507,7 @@ button.white {
   /*padding: 1rem 1rem;*/
   /*border: 0.1rem solid var(--light-color-alt);*/
   cursor: pointer;
-  box-shadow: 2rem 2rem 3rem rgba(0, 0, 0, 0.02);
+  /*box-shadow: 2rem 2rem 3rem rgba(0, 0, 0, 0.02);*/
   margin: 1.5rem auto;
   transition: 0.2s ease;
   position: relative;
@@ -519,22 +542,16 @@ button.white {
   color: #088178;
 }
 
-.featured-products .products .cart {
-  font-weight: 500;
-  color: #088178;
-  border: 1px solid var(--light-color-alt);
-  position: absolute;
-  bottom: 2rem;
-  right: 1rem;
-  padding: .5rem;
-}
-
 .featured-products .products .heart-toggle-btn {
   font-weight: 500;
   color: #088178;
   position: absolute;
   top: 2rem;
   right: 2rem;
+}
+
+.featured-products .products .heart-toggle-btn .heart-fill-icon {
+  display: none;
 }
 
 .featured-products .product-container {
@@ -566,7 +583,7 @@ button.white {
   justify-content: center;
   align-items: center;
   text-align: center;
-  background-image: url(/assets/img/banner/b2.jpg);
+  background-image: url("/assets/img/banner/b2.jpg");
   width: 100%;
   height: 30vh;
   background-size: cover;
@@ -643,7 +660,7 @@ button.white {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  background-image: url(/assets/img/banner/b17.jpg);
+  background-image: url("/assets/img/banner/b17.jpg");
   min-width: 100%;
   height: 30vh;
   background-size: cover;
@@ -653,7 +670,7 @@ button.white {
 }
 
 .sm-banner .banner-box-2 {
-  background-image: url(/assets/img/banner/b10.jpg);
+  background-image: url("/assets/img/banner/b10.jpg");
 }
 
 .sm-banner h4 {
@@ -682,7 +699,7 @@ button.white {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  background-image: url(/assets/img/banner/b7.jpg);
+  background-image: url("/assets/img/banner/b7.jpg");
   width: 100%;
   height: 30vh;
   background-size: cover;
@@ -692,11 +709,11 @@ button.white {
 }
 
 .text-banner .banner-box-2 {
-  background-image: url(/assets/img/banner/b4.jpg);
+  background-image: url("/assets/img/banner/b4.jpg");
 }
 
 .text-banner .banner-box-3 {
-  background-image: url(/assets/img/banner/b18.jpg);
+  background-image: url("/assets/img/banner/b18.jpg");
 }
 
 .text-banner h2 {
