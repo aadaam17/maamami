@@ -1,5 +1,5 @@
 /* Import font */
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Italianno&family=Roboto:wght@300;400;500;700&display=swap');
 
 /* Custom properties */
 :root {
@@ -16,8 +16,9 @@
       #12bcfe,
       #44ce7b);
   --transparent-light-color: rgba(0, 0, 0, 0.1);
-  --transparent-dark-color: var(--secondary-background-color);
-  --font-family: "Poppins", sans-serif;
+  --transparent-dark-color: rgba(255,255,255, 0.75);
+  /*--transparent-dark-color: var(--secondary-background-color);*/
+  --font-family: 'Roboto', sans-serif;
   --font-size-xsm: 1.2rem;
   --font-size-sm: 1.6rem;
   --font-size-md: 2.4rem;
@@ -118,7 +119,7 @@ body.dark-theme {
   outline: none !important;
 }
 
-/* .section:not(.featured-products) {
+/* .section:not(.pro-products) {
   padding-block: 5rem;
 } */
 
@@ -172,7 +173,7 @@ button.white {
   content: attr(data-name);
   font-size: var(--font-size-lg);
   text-transform: uppercase;
-  opacity: 0.1;
+  opacity: 0.15;
   position: absolute;
   top: 0.5rem;
   left: 0;
@@ -419,9 +420,9 @@ button.white {
 /* Section*/
 /* Hero */
 .hero {
-  margin-top: 6.6rem;
+  margin-top: 5.6rem;
   background-image: url("/assets/img/hero4.png");
-  height: 60vh;
+  height: 65vh;
   width: 100%;
   background-size: cover;
   background-position: top 30% right 40%;
@@ -468,7 +469,7 @@ button.white {
 
 .popular-tags-container {
   gap: var(--gap);
-  margin-top: 2rem;
+  margin-top: 3.5rem;
 }
 
 .popular-tags-container .tags {
@@ -495,13 +496,30 @@ button.white {
   overflow: hidden;
 }
 
-/* Featured */
-.featured-products {
+/* Large Banner */
+.lg-banner {
+  margin: 3.5rem 0;
+}
+
+.lg-banner-description h2 {
+  margin: 1.5rem 0;
+  font-size: var(--font-size-lg);
+  font-weight: 900;
+}
+
+.lg-banner button {
+  margin-top: 2rem;
+  color: #088178;
+  border: #088178 1px solid;
+}
+
+/* Products */
+.pro-products {
   padding-block: 2rem;
   margin: 2rem;
 }
 
-.featured-products .products {
+.pro-products .products {
   width: 80%;
   min-width: 2rem;
   /*padding: 1rem 1rem;*/
@@ -513,36 +531,36 @@ button.white {
   position: relative;
 }
 
-.featured-products .products:hover {
+.pro-products .products:hover {
   box-shadow: 2rem 2rem 3rem rgba(0, 0, 0, 0.06);
 }
 
-.featured-products .products img {
+.pro-products .products img {
   width: 100%;
 }
 
-.featured-products .products .description {
+.pro-products .products .description {
   text-align: start;
   padding: 1rem 0;
 }
 
-.featured-products .products .description span {
+.pro-products .products .description span {
   font-size: var(--font-size-xsm);
 }
 
-.featured-products .products .description h5 {
+.pro-products .products .description h5 {
   padding-top: 0.2rem;
   font-size: 1.4rem;
 }
 
-.featured-products .products .description h4 {
+.pro-products .products .description h4 {
   padding-top: 0.2rem;
   font-size: var(--font-size-sm);
   font-weight: 700;
   color: #088178;
 }
 
-.featured-products .products .heart-toggle-btn {
+.pro-products .products .heart-toggle-btn {
   font-weight: 500;
   color: #088178;
   position: absolute;
@@ -550,15 +568,15 @@ button.white {
   right: 2rem;
 }
 
-.featured-products .products .heart-toggle-btn .heart-fill-icon {
+.pro-products .products .heart-toggle-btn .heart-fill-icon {
   display: none;
 }
 
-.featured-products .product-container {
+.pro-products .product-container {
   margin-top: 2rem;
 }
 
-.featured-products .product-container h2 {
+.pro-products .product-container h2 {
   text-align: start;
 }
 
@@ -693,38 +711,19 @@ button.white {
   color: #fff;
 }
 
-/* Text Banner */
-.text-banner .banner-box {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  background-image: url("/assets/img/banner/b7.jpg");
-  width: 100%;
-  height: 30vh;
-  background-size: cover;
-  background-position: center;
-  padding: 3rem;
-  margin-bottom: 1rem;
+/* Stories */
+.article{
+  width: 80%;
+  min-width: 2rem;
+  margin: 0 auto;
 }
 
-.text-banner .banner-box-2 {
-  background-image: url("/assets/img/banner/b4.jpg");
+.article-container {
+  margin-top: 3.5rem;
 }
 
-.text-banner .banner-box-3 {
-  background-image: url("/assets/img/banner/b18.jpg");
-}
-
-.text-banner h2 {
-  color: #fff;
-  font-weight: 900;
-}
-
-.text-banner h3 {
-  color: #ef3636;
-  font-size: var(--font-size-sm);
-  font-weight: 800;
+.article-container .article-description h2 {
+  margin: 1.5rem 0;
 }
 
 /* Newsletter */

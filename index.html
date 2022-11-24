@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Maamami | Home</title>
+    <title>AaLupino | Home</title>
     <!-- Favicon -->
     <link rel="icon" type="image/png" sizes="32x32" href="./assets/img/favicon.png" />
     <!-- Remix icons -->
@@ -20,7 +20,7 @@
     <header class="header" id="header">
         <nav class="navbar container">
             <a href="./index.html">
-                <h2 class="logo">Maamami</h2>
+                <h2 class="logo">AaLupino</h2>
             </a>
 
             <div class="screen-lg-menu screen-sm-hidden" id="screen-lg-menu">
@@ -88,13 +88,13 @@
                             <i class="ri-arrow-right-s-line"></i>
                         </div>
                     </div>
-                    <div class="list-item">
+                    <div class="list-item thick">
                         <div class="list-link" id="list-link-5">
                             <span>Sale</span>
                             <i class="ri-arrow-right-s-line"></i>
                         </div>
                     </div>
-                    <div class="list-item">
+                    <div class="list-item thick">
                         <div class="list-link" id="list-link-6">
                             <span>Drops</span>
                             <i class="ri-arrow-right-s-line"></i>
@@ -476,32 +476,57 @@
             <h2 class="section-title" data-name="Popular tags">Popular tags</h2>
             <div class="popular-tags-container d-grid">
                 <a href="#" class="tags noSelect">
-                    <span class="tag-name">#Men</span>
+                    <span class="tag-name">Men</span>
                     <img src="./assets/img/banner/b4.jpg" alt="" class="tags-image">
                 </a>
 
                 <a href="#" class="tags noSelect">
-                    <span class="tag-name">#Women</span>
+                    <span class="tag-name">Women</span>
                     <img src="./assets/img/banner/b7.jpg" alt="" class="tags-image">
                 </a>
 
                 <a href="#" class="tags noSelect">
-                    <span class="tag-name">#Kids</span>
+                    <span class="tag-name">Kids</span>
                     <img src="./assets/img/banner/b18.jpg" alt="" class="tags-image">
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- Featured Products -->
-    <section class="featured-products section" id="featured-products">
-        <h2 class="section-title" data-name="Featured Products">Featured Products</h2>
-        <p>
-            POPULAR COLLECTIONS NOW!!!
-        </p>
+    <!-- Trending -->
+    <section class="trending-container lg-banner-container section">
+        <h2 class="section-title" data-name="Trending Now">Trending Now</h2>
+        <div class="lg-banner container">
+            <img src="./assets/img/blog/b1.jpg" class="lg-banner-img">
+            <div class="lg-banner-description">
+                <h2>Lorem Ipsum Checkers</h2>
+                <span>
+                    Lorem ipsum Voluptate molestiae cumque distinctio vitae quis, hic nulla ex natus quibusdam alias
+                    quaerat accusamus labore dolorem nobis reiciendis.
+                </span>
+            </div>
+            <button class="white">Shop the Collection</button>
+        </div>
+
+        <div class="lg-banner container">
+            <img src="./assets/img/blog/b4.jpg" class="lg-banner-img">
+            <div class="lg-banner-description">
+                <h2>Lorem Ipsum Checkers</h2>
+                <span>
+                    Lorem ipsum Voluptate molestiae cumque distinctio vitae quis, hic nulla ex natus quibusdam alias
+                    quaerat accusamus labore dolorem nobis reiciendis.
+                </span>
+            </div>
+            <button class="white">Check It Out</button>
+        </div>
+    </section>
+
+    <!-- Products -->
+    <section class="pro-products section" id="pro-products">
+        <h2 class="section-title" data-name="Popular Right Now">Popular Right Now</h2>
 
         <div class="product-container">
-            <h2 class="product-title">#T-Shirts</h2>
+            <h2 class="product-title">T-Shirts</h2>
             <!-- Slider main container -->
             <div class="swiper">
                 <!-- Additional required wrapper -->
@@ -602,7 +627,7 @@
             </div>
 
             <div class="product-container">
-                <h2 class="product-title">#Hoodies</h2>
+                <h2 class="product-title">Hoodies</h2>
                 <!-- Slider main container -->
                 <div class="swiper">
                     <!-- Additional required wrapper -->
@@ -709,7 +734,7 @@
                 </div>
 
                 <div class="product-container">
-                    <h2 class="product-title">#Trousers</h2>
+                    <h2 class="product-title">Trousers</h2>
                     <!-- Slider main container -->
                     <div class="swiper">
                         <!-- Additional required wrapper -->
@@ -816,6 +841,25 @@
                     </div>
     </section>
 
+    <!-- Dropping -->
+    <section class="dropping-container lg-banner-container section">
+        <h2 class="section-title" data-name="Dropping">Dropping</h2>
+        <div class="lg-banner container">
+            <img src="./assets/img/blog/b4.jpg" class="lg-banner-img">
+            <div class="lg-banner-description">
+                <h2>Lorem Ipsum Checkers</h2>
+                <span>
+                    Lorem ipsum Voluptate molestiae cumque distinctio vitae quis, hic nulla ex natus quibusdam alias
+                    quaerat accusamus labore dolorem nobis reiciendis.
+                </span>
+            </div>
+            <div>
+                <button class="white">Notify Me</button>
+                <button class="white">Shop the Collection</button>
+            </div>
+        </div>
+    </section>
+
     <!-- Banner-->
     <section class="banner section section-m" id="banner">
         <h4>Repair Services</h4>
@@ -824,11 +868,8 @@
     </section>
 
     <!-- New Products -->
-    <section class="featured-products section" id="featured-products">
+    <section class="pro-products section" id="pro-products">
         <h2 class="section-title" data-name="New Arrivals">New Arrivals</h2>
-        <p>
-            Summer Collection: New Modern Designs
-        </p>
 
         <div class="product-container">
             <!-- Slider main container -->
@@ -934,37 +975,140 @@
         <div class="banner-box">
             <h4>Crazy deals</h4>
             <h2>Lorem Ipsum Xpx</h2>
-            <span>The best classic dress is on sale at Maamami</span>
+            <span>The best classic dress is on sale at AaLupino</span>
             <button class="white">Learn More</button>
         </div>
         <div class="banner-box banner-box-2">
             <h4>Spring/Summer</h4>
             <h2>Upcomming Lorem</h2>
-            <span>The best classic t-shirt is on sale at Maamami</span>
+            <span>The best classic t-shirt is on sale at AaLupino</span>
             <button class="white">Collection</button>
     </section>
 
-    <!-- text-Banner -->
-    <section class="text-banner section" id="text-banner">
-        <div class="banner-box">
-            <h2>Crazy deals</h2>
-            <h3>Lorem Ipsum checks this out</h3>
+    <!-- Stories -->
+    <section class="article-section section">
+
+        <h2 class="section-title" data-name="AaLupino Stories">AaLupino Stories</h2>
+
+        <div class="swiper">
+            <div class="swiper-wrapper container">
+
+                <a href="#" class="article swiper-slide">
+                    <div class="article-container">
+                        <img src="./assets/img/banner/b19.jpg" alt="">
+                        <div class="article-description">
+                            <h2>Lorem Ipsum Checkers</h2>
+                            <span>
+                                Lorem ipsum Voluptate molestiae cumque distinctio vitae quis, hic nulla ex natus
+                                quibusdam
+                                alias
+                                quaerat accusamus labore dolorem nobis reiciendis.
+                            </span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="#" class="article swiper-slide">
+                    <div class="article-container">
+                        <img src="./assets/img/banner/b19.jpg" alt="">
+                        <div class="article-description">
+                            <h2>Lorem Ipsum Checkers</h2>
+                            <span>
+                                Lorem ipsum Voluptate molestiae cumque distinctio vitae quis, hic nulla ex natus
+                                quibusdam
+                                alias quaerat accusamus labore dolorem nobis reiciendis. </span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="#" class="article swiper-slide">
+                    <div class="article-container">
+                        <img src="./assets/img/banner/b19.jpg" alt="">
+                        <div class="article-description">
+                            <h2>Lorem Ipsum Checkers</h2>
+                            <span>
+                                Lorem ipsum Voluptate molestiae cumque distinctio vitae quis, hic nulla ex natus
+                                quibusdam
+                                alias quaerat accusamus labore dolorem nobis reiciendis. </span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="#" class="article swiper-slide">
+                    <div class="article-container">
+                        <img src="./assets/img/banner/b19.jpg" alt="">
+                        <div class="article-description">
+                            <h2>Lorem Ipsum Checkers</h2>
+                            <span>
+                                Lorem ipsum Voluptate molestiae cumque distinctio vitae quis, hic nulla ex natus
+                                quibusdam
+                                alias quaerat accusamus labore dolorem nobis reiciendis. </span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="#" class="article swiper-slide">
+                    <div class="article-container">
+                        <img src="./assets/img/banner/b19.jpg" alt="">
+                        <div class="article-description">
+                            <h2>Lorem Ipsum Checkers</h2>
+                            <span>
+                                Lorem ipsum Voluptate molestiae cumque distinctio vitae quis, hic nulla ex natus
+                                quibusdam
+                                alias quaerat accusamus labore dolorem nobis reiciendis. </span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="#" class="article swiper-slide">
+                    <div class="article-container">
+                        <img src="./assets/img/banner/b19.jpg" alt="">
+                        <div class="article-description">
+                            <h2>Lorem Ipsum Checkers</h2>
+                            <span>
+                                Lorem ipsum Voluptate molestiae cumque distinctio vitae quis, hic nulla ex natus
+                                quibusdam
+                                alias quaerat accusamus labore dolorem nobis reiciendis. </span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="#" class="article swiper-slide">
+                    <div class="article-container">
+                        <img src="./assets/img/banner/b19.jpg" alt="">
+                        <div class="article-description">
+                            <h2>Lorem Ipsum Checkers</h2>
+                            <span>
+                                Lorem ipsum Voluptate molestiae cumque distinctio vitae quis, hic nulla ex natus
+                                quibusdam
+                                alias quaerat accusamus labore dolorem nobis reiciendis. </span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="#" class="article swiper-slide">
+                    <div class="article-container">
+                        <img src="./assets/img/banner/b19.jpg" alt="">
+                        <div class="article-description">
+                            <h2>Lorem Ipsum Checkers</h2>
+                            <span>
+                                Lorem ipsum Voluptate molestiae cumque distinctio vitae quis, hic nulla ex natus
+                                quibusdam
+                                alias quaerat accusamus labore dolorem nobis reiciendis. </span>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
         </div>
-        <div class="banner-box banner-box-2">
-            <h2>Crazy deals</h2>
-            <h3>Lorem Ipsum checks this out</h3>
-        </div>
-        <div class="banner-box banner-box-3">
-            <h2>Crazy deals</h2>
-            <h3>Lorem Ipsum checks this out</h3>
-        </div>
+
     </section>
 
     <!-- Newsletter -->
     <section class="newsletter section">
         <div class="container">
             <div class="form-container-inner">
-                <h6 class="newsletter-title">Subscribe to Maamami</h6>
+                <h6 class="newsletter-title">Subscribe to AaLupino</h6>
                 <p class="newsletter-description">
                     Get E-mail updates about our latest collections and <span>special offers.</span>
                 </p>
@@ -986,7 +1130,7 @@
 
             <div class="company-data">
                 <a href="./index.html">
-                    <h2 class="logo">Maamami</h2>
+                    <h2 class="logo">AaLupino</h2>
                 </a>
                 <p class="company-description">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, iure. Harum, animi dolores, nam, ad
@@ -1008,7 +1152,7 @@
                     </li>
                 </ul>
 
-                <span class="copyright-notice">&copy;2022 Maamami. All rights reserved.</span>
+                <span class="copyright-notice">&copy;2022 AaLupino. All rights reserved.</span>
             </div>
 
             <div>

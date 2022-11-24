@@ -165,7 +165,7 @@ const swiper = new Swiper(".swiper", {
   // For free slides
   freeMode: true,
   // How much space between slides
-  spaceBetween: 20,
+  spaceBetween: 12,
   // Make the next and previous buttons work
   navigation: {
     nextEl: '.swiper-button-next',
