@@ -3,8 +3,8 @@
 
 /* Custom properties */
 :root {
-  --light-color: #3d3d3d;
-  --light-color-alt: rgba(0, 0, 0, 0.6);
+  --light-color: rgba(0,0,0,0.5);
+  --light-color-alt: rgba(0,0,0,1);
   --primary-background-color: #fff;
   --secondary-background-color: #f1f1f1;
   --hover-light-color: var(--primary-background-color);
@@ -199,7 +199,7 @@ button.white {
 
 .logo {
   font-size: var(--font-size-md);
-  color: var(--light-color);
+  color: var(--light-color-alt);
 }
 
 .menu,
@@ -412,7 +412,7 @@ button.white {
 
 .suggestion-container {
   margin: 3.5rem 1rem 0 1rem;
-  color: var(--light-color-alt);
+  color: var(--light-color);
 }
 
 .suggestion-container .suggest {
@@ -422,11 +422,11 @@ button.white {
 .suggestion-container .suggest .suggest-item {
   margin-top: 1.5rem;
   font-weight: 900;
-  color: var(--light-color);
+  color: var(--light-color-alt);
 }
 
 .suggestion-container .suggest .suggest-item:active {
-  color: var(--light-color-alt);
+  color: var(--light-color);
 }
 
 /* Form JavaScript styles */
