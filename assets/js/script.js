@@ -158,14 +158,14 @@ themeToggleBtn.addEventListener("click", function () {
   }
 });
 
-// Swiper
+// Swiper 
 const swiper = new Swiper(".swiper", {
   // How many slides to show
   slidesPerView: "auto",
   // For free slides
   freeMode: true,
   // How much space between slides
-  spaceBetween: 12,
+  spaceBetween: 4,
   // Make the next and previous buttons work
   navigation: {
     nextEl: '.swiper-button-next',
@@ -188,15 +188,35 @@ const swiper = new Swiper(".swiper", {
   }
 });
 
+/* Image Switcher */
+const mainImg = selectElement(".main-img")
+const smImg = document.getElementsByClassName("sm-img")
+
+/*smImg[1].addEventListener("click", function () {
+  mainImg.src = smImg[1].src
+})*/
+const selectImg = () => {
+  for (let i = 0; i < smImg.length; i++) {
+    smImg[i].addEventListener("click", function () {
+      mainImg.src = smImg[i].src;
+
+      let currentImg = selectElement(".active-img");
+      currentImg.classList.remove("active-img");
+      this.classList.add("active-img")
+    })
+  }
+}
+
+selectImg();
 
 /* Swiper II 
-const swiper2 = new Swiper(".swiper-2", {
+const swiper2 = new Swiper(".swiper2", {
   // How many slides to show
-  slidesPerView: 2,
-  // For free scroll
+  slidesPerView: "auto",
+  // For free slides
   freeMode: true,
   // How much space between slides
-  spaceBetween: 20,
+  spaceBetween: 4,
   // Make the next and previous buttons work
   navigation: {
     nextEl: '.swiper-button-next',
@@ -204,7 +224,7 @@ const swiper2 = new Swiper(".swiper-2", {
   },
   // Make the pagination indicators work
   pagination: {
-    el: '.swiper-pagination-3'
+    el: '.swiper-pagination-2'
   },
   //Responsive breakpoints for how many slides to show at that view
   breakpoints: {
@@ -213,8 +233,6 @@ const swiper2 = new Swiper(".swiper-2", {
       slidesPerView: 2
     },
     // 1200px and up shoes 3 slides
-    1200: {
-      slidesPerView: 3
-    }
+    1200: { slidesPerView: 3 }
   }
 }); */
