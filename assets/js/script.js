@@ -165,7 +165,7 @@ const swiper = new Swiper(".swiper", {
   // For free slides
   freeMode: true,
   // How much space between slides
-  spaceBetween: 4,
+  spaceBetween: 12,
   // Make the next and previous buttons work
   navigation: {
     nextEl: '.swiper-button-next',
@@ -173,7 +173,7 @@ const swiper = new Swiper(".swiper", {
   },
   // Make the pagination indicators work
   pagination: {
-    el: '.swiper-pagination'
+    el: '.swiper-pagination-1'
   },
   //Responsive breakpoints for how many slides to show at that view
   breakpoints: {
@@ -192,9 +192,6 @@ const swiper = new Swiper(".swiper", {
 const mainImg = selectElement(".main-img")
 const smImg = document.getElementsByClassName("sm-img")
 
-/*smImg[1].addEventListener("click", function () {
-  mainImg.src = smImg[1].src
-})*/
 const selectImg = () => {
   for (let i = 0; i < smImg.length; i++) {
     smImg[i].addEventListener("click", function () {
@@ -209,7 +206,7 @@ const selectImg = () => {
 
 selectImg();
 
-/* Swiper II 
+/* Swiper II */
 const swiper2 = new Swiper(".swiper2", {
   // How many slides to show
   slidesPerView: "auto",
@@ -219,8 +216,8 @@ const swiper2 = new Swiper(".swiper2", {
   spaceBetween: 4,
   // Make the next and previous buttons work
   navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
+    nextEl: '.swiper-button-next-2',
+    prevEl: '.swiper-button-prev-2',
   },
   // Make the pagination indicators work
   pagination: {
@@ -235,4 +232,4 @@ const swiper2 = new Swiper(".swiper2", {
     // 1200px and up shoes 3 slides
     1200: { slidesPerView: 3 }
   }
-}); */
+});
