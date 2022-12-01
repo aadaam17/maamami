@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AaLupino | Membership</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/img/favicon.png" />
+    <!-- Remix icons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet" />
+    <!-- Custom styles-->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+</head>
+
+<body>
+    <header class="header" id="header">
+        <nav class="navbar container">
+            <a href="./index.html" class="noSelect">
+                <h2 class="logo">AaLupino</h2>
+            </a>
+
+            <button class="btn place-items-center noSelect hidden" id="theme-toggle-btn">
+                <i class="ri-sun-line sun-icon"></i>
+                <i class="ri-moon-line moon-icon"></i>
+            </button>
+        </nav>
+    </header>
+
+    <section class="login-form-container container">
+        <div class="form-container-inner">
+            <p class="login-form-note">Enter your email to join us or sign in</p>
+            <form action="./password.html" class="form">
+                <input class="login-form-input email-input" type="email" placeholder="Enter your email address" required>
+                <div class="form-condition">
+                    <p>By continuing, I agree to AaLupino's <span>Privacy Policy</span> and <span>Terms of Use.</span>
+                    </p>
+                </div>
+                <button class="btn login-form-btn" type="submit">Continue
+                </button>
+            </form>
+    </section>
+
+
+    <script>
+        // Grab elements
+        const selectElement = (selector) => {
+            const element = document.querySelector(selector);
+            if (element) return element;
+            throw new Error(
+                `Something went wrong! Make sure that ${selector} exists/is typed correctly.`
+            );
+        };
+
+        // Switch theme/add to local storage
+        const body = document.body;
+        const themeToggleBtn = selectElement("#theme-toggle-btn");
+        const currentTheme = localStorage.getItem("currentTheme");
+
+        // Check to see if there is a theme preference in local Storage, if so add the ligt theme to the body
+        if (currentTheme) {
+            body.classList.add("dark-theme");
+        }
+
+        themeToggleBtn.addEventListener("click", function () {
+            // Add dark theme on click
+            body.classList.toggle("dark-theme");
+
+            // If the body has the class of light theme then add it to local Storage, if not remove it
+            if (body.classList.contains("dark-theme")) {
+                localStorage.setItem("currentTheme", "themeActive");
+            } else {
+                localStorage.removeItem("currentTheme");
+            }
+        });
+    </script>
+</body>
+
+</html>

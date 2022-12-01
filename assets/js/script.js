@@ -147,7 +147,7 @@ if (currentTheme) {
 }
 
 themeToggleBtn.addEventListener("click", function () {
-  // Add light theme on click
+  // Add dark theme on click
   body.classList.toggle("dark-theme");
 
   // If the body has the class of light theme then add it to local Storage, if not remove it

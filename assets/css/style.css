@@ -88,11 +88,19 @@ body.dark-theme {
   --transparent-light-color: rgba(255, 255, 255, 0.05);
 }
 
+body.dark-theme .login-form-input {
+  background-color: #000;
+}
+
 /* Reusable classes */
 .container {
   max-width: 160rem;
   margin: 0 auto;
   padding: 0 1.5rem;
+}
+
+.hidden {
+  visibility: hidden;
 }
 
 .place-items-center {
@@ -406,8 +414,9 @@ button.white {
   display: flex;
 }
 
-.form-input::placeholder {
+::placeholder {
   color: var(--light-color-alt);
+  opacity: 0.75;
 }
 
 .suggestion-container {
@@ -720,6 +729,10 @@ button.white {
   margin-right: 0;
 }
 
+.shop-products .products .description {
+  margin-left: 1rem;
+}
+
 .shop-products .products .description h5 {
   padding-top: 0.2rem;
   font-size: 1.3rem;
@@ -956,4 +969,177 @@ button.white {
   height: .4rem;
   background-color: #000;
   border-radius: 50%;
+}
+
+/* Email Lookup */
+.login-form-container,
+.signup-form-container {
+  margin: 0 1rem 5rem 1rem;
+}
+
+.login-form-container .form-container-inner,
+.signup-form-container .form-container-inner {
+  gap: 1rem;
+}
+
+.login-form-note {
+  font-size: 2.5rem;
+  text-align: start;
+}
+
+.login-form-container .form,
+.signup-form-container .form {
+  flex-direction: column;
+  margin-top: 2rem;
+}
+
+.login-form-container .email-input {
+  margin-top: 1rem;
+}
+
+.login-form-input,
+.login-form-btn {
+  display: inline-block;
+  color: var(--light-color-alt);
+  border: 2px solid var(--secondary-background-color);
+  padding: 1.5rem 1rem;
+  outline: none;
+  width: 100%;
+}
+
+.login-form-btn {
+  margin-top: 2rem;
+  border-radius: 5rem;
+  background-color: var(--secondary-background-color);
+}
+
+.login-form-input {
+  background-color: #fff;
+}
+
+.form-condition {
+  text-align: start;
+  margin: 3rem 0 1rem 0;
+  font-size: 1.4rem;
+}
+
+.email-check {
+  text-align: start;
+  margin-top: 0;
+  gap: .5rem;
+}
+
+.email-check a {
+  color: var(--light-color);
+  text-decoration: underline;
+}
+
+.form-condition p span {
+  text-decoration: underline;
+}
+
+.input-wrapper {
+  position: relative;
+  margin-bottom: 2.5rem;
+}
+
+.place-icon {
+  position: absolute;
+  right: 1rem;
+  top: 1.7rem;
+  cursor: pointer;
+}
+
+.place-icon i {
+  font-size: 2rem;
+}
+
+.place-icon .arrow-down {
+  font-size: 2.5rem;
+}
+
+#password-toggle-btn .eye-off-icon {
+  display: none;
+}
+
+#password-toggle-btn.activated .eye-off-icon {
+  display: block;
+}
+
+#password-toggle-btn.activated .eye-icon {
+  display: none;
+}
+
+.name-input-wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.instruct {
+  text-align: start;
+  padding-left: 1rem;
+}
+
+.instruct p {
+  display: flex;
+  font-size: 1rem;
+  padding-top: .5rem;
+  align-items: center;
+}
+
+.instruct p i {
+  font-size: 1.5rem;
+  padding-top: 1rem;
+}
+
+.form-agreement .form-condition {
+  display: flex;
+  gap: 1rem;
+}
+
+.form-agreement .form-condition input {
+  align-self: flex-start;
+}
+
+.form-agreement .form-condition p {
+  line-height: 2rem;
+}
+
+select {
+  font-size: 1.5rem;
+  opacity: 0.75;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  background-image: url("../img/icon/arrow-down-s-line.svg");
+  background-repeat: no-repeat;
+  background-position-x: 97%;
+  background-position-y: 1rem;
+  background-size: 2.5rem;
+}
+
+input[type="date"] {
+  background: transparent;
+  background-image: url("../img/icon/calendar-line.svg");
+  background-repeat: no-repeat;
+  background-position-x: 97%;
+  background-position-y: 1.5rem;
+  background-size: 2rem;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+input[type="date"]::before {
+  content: attr(placeholder);
+  position: absolute;
+  font-size: 1.5rem;
+  opacity: 0.75;
+}
+
+input[type="date"]:focus::before,
+input[type="date"]:valid::before {
+  content: "" !important;
 }

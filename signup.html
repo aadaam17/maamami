@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AaLupino | Signup</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/img/favicon.png" />
+    <!-- Remix icons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet" />
+    <!-- Custom styles-->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+</head>
+
+<body>
+    <header class="header" id="header">
+        <nav class="navbar container">
+            <a href="./index.html" class="noSelect">
+                <h2 class="logo">AaLupino</h2>
+            </a>
+
+            <button class="btn place-items-center noSelect hidden" id="theme-toggle-btn">
+                <i class="ri-sun-line sun-icon"></i>
+                <i class="ri-moon-line moon-icon"></i>
+            </button>
+
+        </nav>
+    </header>
+
+    <section class="signup-form-container container">
+        <div class="form-container-inner">
+            <p class="login-form-note">Now let's make you an AaLupi.</p>
+            <div class="email-check">
+                <p>
+                    <span>We've sent a code to</span>
+                    <br>
+                    <span>example@gmail.com</span>
+                    <a href="/login.html">Edit</a>
+                </p>
+            </div>
+            <form action="" class="form">
+                <div class="form-input-wrapper">
+                    <div class="input-wrapper">
+                        <input class="login-form-input" id="code" type="number" placeholder="Code" required />
+                        <button type="button" class="btn noSelect place-icon" id="refresh-btn">
+                            <i class="ri-refresh-line"></i>
+                        </button>
+                    </div>
+
+                    <div class="name-input-wrapper input-wrapper">
+                        <div class="first-name">
+                            <input type="text" class="login-form-input" id="first-name" placeholder="First Name">
+                        </div>
+
+                        <div class="last-name">
+                            <input type="text" class="login-form-input" id="last-name" placeholder="Surname">
+                        </div>
+                    </div>
+
+                    <div class="input-wrapper">
+                        <input class="login-form-input" id="password" type="password" placeholder="Password" required />
+                        <div class="instruct">
+                            <p><span><i class="ri-close-line"></i></span>Minimum of 8 characters</p>
+                            <p><span><i class="ri-close-line"></i></span>Uppercase, lowercase and one number</p>
+                        </div>
+                        <button class="btn noSelect place-icon" id="password-toggle-btn">
+                            <i class="ri-eye-line eye-icon"></i>
+                            <i class="ri-eye-off-line eye-off-icon"></i>
+                        </button>
+                    </div>
+
+                    <div class="input-wrapper" id="preference">
+                        <select name="" id="" class="login-form-input">
+                            <option value="" disabled selected hidden>Shopping Preference</option>
+                            <option value="">Men's</option>
+                            <option value="">Women's</option>
+                        </select>
+                    </div>
+
+                    <div class="input-wrapper">
+                        <input class="login-form-input" id="date" type="date" placeholder="Date" required/>
+                    </div>
+
+                </div>
+
+                <div class="form-agreement">
+                    <div class="form-condition">
+                        <input type="checkbox" name="" id="">
+                        <p>Sign up for emails to get updates form
+                            AaLupino on products, offers and you Member
+                            benefits.
+                        </p>
+                    </div>
+                    <div class="form-condition">
+                        <input type="checkbox" name="" id="">
+                        <p>I agree to AaLupino's <span>Privacy Policy</span>
+                            and <span>Terms of Use.</span>
+                        </p>
+                    </div>
+                </div>
+                <button class="btn login-form-btn" type="submit">
+                    <span>Create Account</span>
+                </button>
+            </form>
+    </section>
+
+
+
+    <script>
+        // Grab elements
+        const selectElement = (selector) => {
+            const element = document.querySelector(selector);
+            if (element) return element;
+            throw new Error(
+                `Something went wrong! Make sure that ${selector} exists/is typed correctly.`
+            );
+        };
+
+        // Switch theme/add to local storage
+        const body = document.body;
+        const themeToggleBtn = selectElement("#theme-toggle-btn");
+        const currentTheme = localStorage.getItem("currentTheme");
+
+        // Check to see if there is a theme preference in local Storage, if so add the ligt theme to the body
+        if (currentTheme) {
+            body.classList.add("dark-theme");
+        }
+
+        themeToggleBtn.addEventListener("click", function () {
+            // Add dark theme on click
+            body.classList.toggle("dark-theme");
+
+            // If the body has the class of light theme then add it to local Storage, if not remove it
+            if (body.classList.contains("dark-theme")) {
+                localStorage.setItem("currentTheme", "themeActive");
+            } else {
+                localStorage.removeItem("currentTheme");
+            }
+        });
+
+        // Toggling the Password Visibility
+        const togglePassword = document.querySelector("#password-toggle-btn");
+        const password = document.querySelector("#password");
+
+        togglePassword.addEventListener("click", function () {
+            // toggle the type attribute
+            const type = password.getAttribute("type") === "password" ? "text" : "password";
+            password.setAttribute("type", type);
+
+            // toggle the icon
+            togglePassword.classList.toggle('activated');
+
+        });
+
+        // prevent form submit
+        const form = document.querySelector("form");
+        form.addEventListener('submit', function (e) {
+            if (e.submitter.matches('#password-toggle-btn')) {
+                e.preventDefault();
+            }
+        });
+    </script>
+</body>
+
+</html>
