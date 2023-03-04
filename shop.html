@@ -63,39 +63,45 @@
             </div>
 
             <div class="menu screen-lg-hidden" id="menu">
+                <div class="auth-user menu-item">
+                    <div class="menu-link menu-linker" id="menu-link-0">
+                        <i class="ri-user-3-line"></i> <span>Aadam</span>
+                        <i class="ri-arrow-right-s-line"></i>
+                    </div>
+                </div>
                 <div class="list">
                     <div class="menu-item thick">
-                        <div class="menu-link" id="menu-link-1">
+                        <div class="menu-link menu-linker" id="menu-link-1">
                             <span>New and Featured</span>
                             <i class="ri-arrow-right-s-line"></i>
                         </div>
                     </div>
                     <div class="menu-item thick">
-                        <div class="menu-link" id="menu-link-2">
+                        <div class="menu-link menu-linker" id="menu-link-2">
                             <span>Men</span>
                             <i class="ri-arrow-right-s-line"></i>
                         </div>
                     </div>
                     <div class="menu-item thick">
-                        <div class="menu-link" id="menu-link-3">
+                        <div class="menu-link menu-linker" id="menu-link-3">
                             <span>Women</span>
                             <i class="ri-arrow-right-s-line"></i>
                         </div>
                     </div>
                     <div class="menu-item thick">
-                        <div class="menu-link" id="menu-link-4">
+                        <div class="menu-link menu-linker" id="menu-link-4">
                             <span>Kids</span>
                             <i class="ri-arrow-right-s-line"></i>
                         </div>
                     </div>
                     <div class="menu-item thick">
-                        <div class="menu-link" id="menu-link-5">
+                        <div class="menu-link menu-linker" id="menu-link-5">
                             <span>Sale</span>
                             <i class="ri-arrow-right-s-line"></i>
                         </div>
                     </div>
                     <div class="menu-item thick">
-                        <div class="menu-link" id="menu-link-6">
+                        <div class="menu-link menu-linker" id="menu-link-6">
                             <span>Drops</span>
                             <i class="ri-arrow-right-s-line"></i>
                         </div>
@@ -133,9 +139,56 @@
                 </div>
             </div>
 
+            <div class="sub-menu screen-lg-hidden" id="sub-menu-0">
+                <div class="list">
+                    <button class="btn noSelect close-menu-btn" id="close-menu-btn-0">
+                        <i class="ri-arrow-left-s-line"></i>
+                        <span>All</span>
+                    </button>
+                </div>
+                <h3 class="thick">Aadam</h3>
+                <hr>
+                <div class="list">
+                    <div class="menu-item">
+                        <a href="{% url 'dashboard' %}">
+                            <span>Dashboard</span>
+                        </a>
+                    </div>
+                    <div class="menu-item">
+                        <a href="{% url 'profile' %}" class="menu-link noSelect">
+                            <span>Profile</span> </a>
+                    </div>
+                    <div class="menu-item">
+                        <a href="#" class="menu-link noSelect">
+                            <span>Orders</span> </a>
+                    </div>
+                    <div class="menu-item">
+                        <a href="#" class="menu-link noSelect">
+                            <span>Favorites</span> </a>
+                    </div>
+                    <div class="menu-item">
+                        <a href="#" class="menu-link noSelect">
+                            <span>Inbox</span>
+                        </a>
+                    </div>
+                    <div class="menu-item">
+                        <a href="#" class="menu-link noSelect">
+                            <span>Experiences</span> </a>
+                    </div>
+                    <div class="menu-item">
+                        <a href="#" class="menu-link noSelect">
+                            <span>Account Settings</span> </a>
+                    </div>
+                    <div class="menu-item">
+                        <a href="{% url 'logout' %}" class="menu-link fancy noSelect">
+                            <span>Log Out</span> </a>
+                    </div>
+                </div>
+            </div>
+
             <div class="sub-menu screen-lg-hidden" id="sub-menu-1">
                 <div class="list">
-                    <button class="btn noSelect" id="close-menu-btn-1">
+                    <button class="btn noSelect close-menu-btn" id="close-menu-btn-1">
                         <i class="ri-arrow-left-s-line"></i>
                         <span>All</span>
                     </button>
@@ -183,7 +236,7 @@
 
             <div class="sub-menu screen-lg-hidden" id="sub-menu-2">
                 <div class="list">
-                    <button class="btn noSelect" id="close-menu-btn-2">
+                    <button class="btn noSelect close-menu-btn" id="close-menu-btn-2">
                         <i class="ri-arrow-left-s-line"></i>
                         <span>All</span>
                     </button>
@@ -192,7 +245,7 @@
                 <hr>
                 <div class="list">
                     <div class="menu-item">
-                        <a href="#" class="menu-link noSelect">
+                        <a href="./shop.html" class="menu-link noSelect">
                             <span>New Men Ipsum</span>
                         </a>
                     </div>
@@ -231,7 +284,7 @@
 
             <div class="sub-menu screen-lg-hidden" id="sub-menu-3">
                 <div class="list">
-                    <button class="btn noSelect" id="close-menu-btn-3">
+                    <button class="btn noSelect close-menu-btn" id="close-menu-btn-3">
                         <i class="ri-arrow-left-s-line"></i>
                         <span>All</span>
                     </button>
@@ -245,12 +298,10 @@
                         </a>
                     </div>
                     <div class="menu-item">
-                        <a href="#" class="menu-link noSelect">
-                            <span>Men Lorem Ipsum</span>
+                        <a href="#" class="menu-link noSelect"> <span>Men Lorem Ipsum</span>
                         </a>
                     </div>
-                    <div class="menu-item">
-                        <a href="#" class="menu-link noSelect">
+                    <div class="menu-item"> <a href="#" class="menu-link noSelect">
                             <span>Women Ipsum</span>
                         </a>
                     </div>
@@ -279,7 +330,7 @@
 
             <div class="sub-menu screen-lg-hidden" id="sub-menu-4">
                 <div class="list">
-                    <button class="btn noSelect" id="close-menu-btn-4">
+                    <button class="btn noSelect close-menu-btn" id="close-menu-btn-4">
                         <i class="ri-arrow-left-s-line"></i>
                         <span>All</span>
                     </button>
@@ -327,7 +378,7 @@
 
             <div class="sub-menu screen-lg-hidden" id="sub-menu-5">
                 <div class="list">
-                    <button class="btn noSelect" id="close-menu-btn-5">
+                    <button class="btn noSelect close-menu-btn" id="close-menu-btn-5">
                         <i class="ri-arrow-left-s-line"></i>
                         <span>All</span>
                     </button>
@@ -375,7 +426,7 @@
 
             <div class="sub-menu screen-lg-hidden" id="sub-menu-6">
                 <div class="list">
-                    <button class="btn noSelect" id="close-menu-btn-6">
+                    <button class="btn noSelect close-menu-btn" id="close-menu-btn-6">
                         <i class="ri-arrow-left-s-line"></i>
                         <span>All</span>
                     </button>
@@ -433,8 +484,7 @@
 
                 <button class="btn place-items-center screen-lg-hidden menu-toggle-icon noSelect" id="menu-toggle-icon">
                     <i class="ri-menu-3-line open-menu-icon"></i>
-                    <i class="ri-close-line close-menu-icon"></i>
-                </button>
+                    <i class="ri-close-line close-menu-icon"></i> </button>
 
                 <a href="#" class="menu-link screen-sm-hidden fancy">
                     <span>Sign in</span>
@@ -442,6 +492,8 @@
             </div>
         </nav>
     </header>
+
+    <div class="menu-mask container"></div>
 
     <!-- Search -->
     <section class="search section">
@@ -488,14 +540,42 @@
         </div>
     </section>
 
+    <!-- Filter -->
+    <section class="filter section">
+        <div class="filter-form-container container" id="filter-form-container">
+
+            <div class="form-container-inner">
+                <h3>Here lies the filter <h3>
+                        <form action="" class="form">
+
+                        </form>
+            </div>
+
+            <button class="btn form-close-btn place-items-center noSelect" id="filter-close-btn">
+                <i class="ri-close-line"></i>
+            </button>
+
+        </div>
+    </section>
+
     <!-- Products -->
-    <section class="pro-products shop-products section" id="pro-products">
+    <section class="pro-products x-products section" id="pro-products">
         <h2 class="product-title">Mens Clothing</h2>
+        <div class="scrollmenu">
+            <a href="#">Lorem</a>
+            <a href="#">Lorem</a>
+            <a href="#">Lorem</a>
+            <a href="#">Lorem</a>
+            <a href="#">Lorem</a>
+            <a href="#">Lorem</a>
+            <a href="#">Lorem</a>
+        </div>
+
         <hr>
 
         <div class="stat">
             <h4>1245 Results</h4>
-            <button>
+            <button type="button" id="filter-open-btn">
                 <span>Filter</span>
                 <i class="ri-equalizer-line"></i>
             </button>
@@ -689,7 +769,7 @@
 
         <h2 class="section-title" data-name="AaLupino Stories">AaLupino Stories</h2>
 
-        <div class="swiper">
+        <div class="swiper swiper1">
             <div class="swiper-wrapper">
 
                 <a href="#" class="article swiper-slide">
@@ -907,6 +987,19 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <!-- Custom script -->
     <script src="./assets/js/script.js"></script>
+    <script>
+        // Open/Close filter pop-up form
+        const filterContainer = document.getElementById("filter-form-container");
+        const filterOpenBtn = document.getElementById("filter-open-btn");
+        const filterCloseBtn = document.getElementById("filter-close-btn");
+
+        filterOpenBtn.addEventListener("click", () =>
+            filterContainer.classList.add("activated")
+        );
+        filterCloseBtn.addEventListener("click", () =>
+            filterContainer.classList.remove("activated")
+        );
+    </script>
 </body>
 
 </html>
