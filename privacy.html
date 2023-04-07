@@ -25,36 +25,18 @@
                 <i class="ri-sun-line sun-icon"></i>
                 <i class="ri-moon-line moon-icon"></i>
             </button>
-
         </nav>
     </header>
 
-    <section class="login-form-container container">
-        <div class="form-container-inner">
-            <p class="login-form-note">What's your password?</p>
-            <div class="email-check">
-                <p>
-                    <span>example@gmail.com</span>
-                    <a href="./login.html">Edit</a>
-                </p>
-            </div>
-            <form action="./index.html" class="form">
-                <div class="input-wrapper">
-                    <input class="x-form-input" id="password" type="password" placeholder="Password" />
-                    <button type="button" class="btn noSelect place-icon" id="password-toggle-btn">
-                        <i class="ri-eye-line eye-icon"></i>
-                        <i class="ri-eye-off-line eye-off-icon"></i>
-                    </button>
-                </div>
-                <div class="form-condition">
-                    <p><span class="noSelect"><a href="#">Forgotten your password?</a></span>
-                    </p>
-                </div>
-                <button class="btn login-form-btn" id="submit" type="submit">Continue
-                </button>
-            </form>
+    <section class="section-header-offset container">
+        <div class="setting-x">
+            <a href="./settings.html" class="back noSelect">
+                <i class="ri-arrow-left-s-line"></i>
+                <span>Back</span>
+            </a>
+            <h4>Privacy Settings</h4>
+        </div>
     </section>
-
 
 
     <script>
@@ -86,28 +68,6 @@
                 localStorage.setItem("currentTheme", "themeActive");
             } else {
                 localStorage.removeItem("currentTheme");
-            }
-        });
-
-        // Toggling the Password Visibility
-        const togglePassword = document.querySelector("#password-toggle-btn");
-        const password = document.querySelector("#password");
-
-        togglePassword.addEventListener("click", function () {
-            // toggle the type attribute
-            const type = password.getAttribute("type") === "password" ? "text" : "password";
-            password.setAttribute("type", type);
-
-            // toggle the icon
-            togglePassword.classList.toggle('activated');
-
-        });
-
-        // prevent form submit
-        const form = document.querySelector("form");
-        form.addEventListener('submit', function (e) {
-            if (e.submitter.matches('#password-toggle-btn')) {
-                e.preventDefault();
             }
         });
     </script>

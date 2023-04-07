@@ -76,6 +76,17 @@ i {
   font-size: var(--font-size-md);
 }
 
+.back {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  margin-bottom: 3rem;
+}
+
+.bjack i {
+  font-size: var(--font-size-lg);
+}
+
 /* Theme color change */
 body.dark-theme {
   --light-color: #fff;
@@ -1312,6 +1323,7 @@ div.scrollmenu {
   overflow: auto;
   white-space: nowrap;
   margin-bottom: 3rem;
+  padding-left: .5rem;
 }
 
 div.scrollmenu::-webkit-scrollbar {
@@ -1376,3 +1388,33 @@ div.scrollmenu a:is(:link, :active, :visited).active {
   background-color: var(--light-color);
 }
 
+.setting-x {
+  margin: 0 auto;
+  padding: 7rem 3rem 0 3rem;
+}
+
+/* Delete */
+
+.delete-container {
+  padding-top: 2rem;
+  font-size: var(--font-size-md);
+}
+
+.delete-btn {
+  font-size: var(--font-size-sm);
+  padding-top: 2.5rem;
+  display: flex;
+  gap: 5rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.delete-btn input {
+  border-radius: 50px;
+  padding: 1.5rem 2rem;
+  background-color: var(--transparent-light-color);
+}
+
+.delete-btn a {
+  color: #ef3636;
+}

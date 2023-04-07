@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AaLupino | Home</title> <!-- Favicon -->
+    <title>Aalupino | Home</title> <!-- Favicon -->
     <link rel="icon" type="image/png" sizes="32x32" href="./assets/img/favicon.png" />
     <!-- Remix icons -->
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet" />
@@ -17,11 +17,9 @@
 <body>
     <!-- Header -->
     <header class="header" id="header">
-        <nav class="navbar container">
-            <a href="./index.html" class="noSelect">
-                <h2 class="logo">AaLupino</h2>
+        <nav class="navbar container"> <a href="./index.html" class="noSelect">
+                <h2 class="logo">Aalupino</h2>
             </a>
-
             <div class="screen-lg-menu screen-sm-hidden" id="screen-lg-menu">
                 <ul class="list">
                     <li class="menu-item">
@@ -297,10 +295,12 @@
                         </a>
                     </div>
                     <div class="menu-item">
-                        <a href="#" class="menu-link noSelect"> <span>Men Lorem Ipsum</span>
-                        </a>
+                        <a href="#" class="menu-link noSelect">
+                            <span>Men Lorem Ipsum</span>
+                        </a>r
                     </div>
-                    <div class="menu-item"> <a href="#" class="menu-link noSelect">
+                    <div class="menu-item">
+                        <a href="#" class="menu-link noSelect">
                             <span>Women Ipsum</span>
                         </a>
                     </div>
@@ -483,7 +483,8 @@
 
                 <button class="btn place-items-center screen-lg-hidden menu-toggle-icon noSelect" id="menu-toggle-icon">
                     <i class="ri-menu-3-line open-menu-icon"></i>
-                    <i class="ri-close-line close-menu-icon"></i> </button>
+                    <i class="ri-close-line close-menu-icon"></i>
+                </button>
 
                 <a href="#" class="menu-link screen-sm-hidden fancy">
                     <span>Sign in</span>
@@ -491,6 +492,7 @@
             </div>
         </nav>
     </header>
+
     <div class="menu-mask container"></div>
 
     <!-- Search -->
@@ -538,80 +540,10 @@
         </div>
     </section>
 
-    <!-- Article Form -->
+    <!-- Help -->
     <section class="section-header-offset container">
-        <div class="form-container-inner">
-            <p class="login-form-note">You are about to Create/Edit an Article.</p>
-            <form method="POST" action="" enctype='multipart/form-data'>
-                <div class="form-input-wrapper">
-                    <div class="input-wrapper">
-                        <input type="text" class="x-form-input" name="title" id="title" placeholder="Title">
-                    </div>
-                    <div class="input-wrapper">
-                        <label for="banner">Banner:</label>
-                        <input type="file" class="x-form-input" name="banner" id="banner" accept="image/*">
-                        <div class="instruct">
-                            <p><span><i class="ri-close-line"></i></span>Banner image cannot be empty</p>
-                        </div>
-                    </div>
-                    <div class="input-wrapper">
-                        <textarea rows="10" cols="10" class="x-form-input" name="parag1"
-                            id="parag1">You should start here...</textarea>
-                    </div>
-                    <div class="input-wrapper">
-                        <label for="image1">Image 1:</label>
-                        <input type="file" class="x-form-input" name="image1" id="image1" accept="image/*">
-                    </div>
-                    <div class="input-wrapper">
-                        <label for="image2">Image 2:</label>
-                        <input type="file" class="x-form-input" name="image2" id="image2" accept="image/*">
-                    </div>
-                    <div class="input-wrapper">
-                        <textarea rows="10" cols="10" class="x-form-input" name="parag2"
-                            id="parag2">Continue here...</textarea>
-                    </div>
-                    <div class="input-wrapper">
-                        <label for="image3">Image 3:</label>
-                        <input type="file" class="x-form-input" name="image3" id="image3" accept="image/*">
-                    </div>
-                    <div class="input-wrapper">
-                        <textarea rows="10" cols="10" class="x-form-input" id="qoute">...significant Qoute</textarea>
-                    </div>
-                    <div class="input-wrapper">
-                        <textarea rows="10" cols="10" class="x-form-input" id="parag3">Continue here...</textarea>
-                    </div>
-                    <div class="input-wrapper">
-                        <label for="image4">Image 4:</label>
-                        <input type="file" class="x-form-input" name="image4" id="image4" accept="image/*">
-                    </div>
-                    <div class="input-wrapper">
-                        <textarea rows="10" cols="10" class="x-form-input" id="parag4">Continue here...</textarea>
-                    </div>
-                    <div class="input-wrapper">
-                        <input type="text" class="x-form-input" id="author" placeholder="Author">
-                    </div>
-                    <div class="input-wrapper">
-                        <label for="author-image">Author Image:</label>
-                        <input type="file" class="x-form-input" name="author-image" id="author-image" accept="image/*">
-                    </div>
-                    <div class="input-wrapper">
-                        <textarea rows="10" cols="10" class="x-form-input" id="author-details">Author details</textarea>
-                    </div>
-                    <div class="input-wrapper">
-                        <input type="text" class="x-form-input" name="author-insta" id="author-insta"
-                            placeholder="author IG">
-                    </div>
-                    <div class="input-wrapper">
-                        <input type="text" class="x-form-input" name="author-fb" id="author-fb"
-                            placeholder="author Facebook">
-                    </div>
-                    <div class="input-wrapper">
-                        <input type="text" class="x-form-input" name="author-twitter" id="author-twitter"
-                            placeholder="author Twitter">
-                    </div>
-                </div>
-                <input class="btn login-form-btn" type="submit" value="submit" />
-            </form>
+        <div class="help-container">
+            <h3>Gallery here...</h3>
         </div>
     </section>
 
@@ -620,7 +552,7 @@
         <div class="footer-container container d-grid">
             <div class="company-data">
                 <a href="./index.html" class="noSelect">
-                    <h2 class="logo">AaLupino</h2>
+                    <h2 class="logo">Aalupino</h2>
                 </a>
                 <p class="company-description">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, iure. Harum, animi dolores, nam, ad
@@ -641,7 +573,7 @@
                         <a href="#" class="menu-link"><i class="ri-pinterest-line"></i></a>
                     </li>
                 </ul>
-                <span class="copyright-notice">&copy;2022 AaLupino. All rights reserved.</span>
+                <span class="copyright-notice">&copy;2022 Aalupino. All rights reserved.</span>
             </div>
             <div>
                 <h6 class="title footer-title">Categories</h6>
