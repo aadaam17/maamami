@@ -221,7 +221,8 @@ button.white {
   color: var(--light-color-alt);
 }
 
-.menu-mask {
+.menu-mask,
+.form-popup-mask {
   max-width: 100%;
   width: 100%;
   height: 100vh;
@@ -235,7 +236,8 @@ button.white {
   transform: scale(0);
 }
 
-.menu-mask.activated {
+.menu-mask.activated,
+.form-popup-mask.activated {
   opacity: 1;
   transform: scale(1);
 }
@@ -386,7 +388,8 @@ button.white {
 
 /* Search */
 .filter-form-container,
-.search-form-container {
+.search-form-container,
+.popup-form-container {
   width: 100%;
   max-width: 100%;
   height: 100vh;
@@ -477,7 +480,8 @@ button.white {
 
 /* Form JavaScript styles */
 .filter-form-container.activated,
-.search-form-container.activated {
+.search-form-container.activated,
+.popup-form-container.activated {
   opacity: 1;
   transform: scale(1);
 }
@@ -1042,7 +1046,7 @@ button.white {
 }
 
 .x-form-input,
-.login-form-btn {
+.submit-form-btn {
   display: inline-block;
   color: var(--light-color-alt);
   border: 2px solid var(--secondary-background-color);
@@ -1051,7 +1055,7 @@ button.white {
   width: 100%;
 }
 
-.login-form-btn {
+.submit-form-btn {
   margin-top: 2rem;
   border-radius: 5rem;
   background-color: var(--secondary-background-color);
@@ -1393,8 +1397,87 @@ div.scrollmenu a:is(:link, :active, :visited).active {
   padding: 7rem 3rem 0 3rem;
 }
 
-/* Delete */
+.setting-x h4,
+.setting-x p {
+  padding-top: 2.5rem;
+}
 
+/* Settings Items */
+/* Communication Pref. */
+.x-checkbox {
+  padding-top: 2.5rem;
+  gap: 1rem;
+  display: flex;
+}
+
+.setting-x .btn {
+  margin-top: 5rem;
+}
+
+/* Account Details */
+.account-details-form .form-container-inner {
+  margin-top: 4rem;
+}
+
+.account-details {
+  margin-bottom: 7rem;
+}
+
+.account-details .submit-form-btn {
+  margin-top: 2rem;
+}
+
+.account-details .label-wrapper {
+  margin-bottom: 2.5rem;
+}
+
+.label-wrapper h4,
+.label {
+  text-align: start;
+  color: var(--light-color-alt);
+  margin-bottom: 1rem;
+}
+
+.label-wrapper .edit-password,
+.label-wrapper .edit-phone {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.label-wrapper .edit-password span,
+.label-wrapper .edit-phone span {
+  font-size: 2.5rem;
+}
+
+.label-wrapper .edit-password a,
+.label-wrapper .edit-phone a {
+  font-size: 1.5rem;
+  text-decoration: underline;
+}
+
+/* Delivery */
+.setting-x.delivery p {
+  font-size: 1.47rem;
+  line-height: 3rem;
+}
+
+/* Popup */
+.popup-form-container {
+  overflow-y: scroll;
+  -webkit-overflow-scrolling:touch;
+  padding-bottom: 10rem;
+}
+
+.popup-form-container .form-container-inner {
+  padding: 2rem;
+}
+
+.popup-form-container .form-input-wrapper {
+  margin-top: 2.5rem;
+}
+
+/* Delete */
 .delete-container {
   padding-top: 2rem;
   font-size: var(--font-size-md);

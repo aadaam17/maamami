@@ -29,13 +29,136 @@
     </header>
 
     <section class="section-header-offset container">
-        <div class="setting-x">
+        <div class="setting-x delivery">
             <a href="./settings.html" class="back noSelect">
                 <i class="ri-arrow-left-s-line"></i>
                 <span>Back</span>
             </a>
-            <h4>Delivery Settings</h4>
+            <h3>Delivery Settings</h3>
+
+            <p>
+                You currently don't have any saved delivery addresses.
+                Add an address here to be prefilled for quicker checkout.
+            </p>
+
+            <button class="btn submit-form-btn noSelect popup-open-btn" id="popup-open-btn">Add Address</button>
+
         </div>
+    </section>
+
+    <!--Popup Form-->
+    <section class="popup section">
+        <div class="popup-form-container" id="popup-form-container">
+            <div class="form-container-inner">
+
+                <h3>Add Address</h3>
+                <form class="delivery-form" action="">
+                    <div class="form-container-innner">
+                        <div class="form-input-wrapper">
+
+                            <div class="input-wrapper">
+                                <div class="first-name">
+                                    <input type="text" class="x-form-input" id="first-name" placeholder="First Name*">
+                                </div>
+                            </div>
+
+                            <div class="input-wrapper">
+                                <div class="last-name">
+                                    <input type="text" class="x-form-input" id="last-name" placeholder="Last Name*">
+                                </div>
+                            </div>
+
+                            <div class="input-wrapper">
+                                <div class="">
+                                    <input type="text" class="x-form-input" id="" placeholder="Stress Address*">
+                                </div>
+                            </div>
+
+                            <div class="input-wrapper">
+                                <div class="">
+                                    <input type="text" class="x-form-input" id="" placeholder="Apt, Suite, Building">
+                                </div>
+                                <div class="instruct">
+                                    <p><span>Optional</span></p>
+                                </div>
+                            </div>
+
+                            <div class="input-wrapper">
+                                <div class="">
+                                    <input type="text" class="x-form-input" id="" placeholder="City*">
+                                </div>
+                            </div>
+
+                            <div class="input-wrapper">
+                                <div class="">
+                                    <input type="text" class="x-form-input" id="" placeholder="Zip*">
+                                </div>
+                            </div>
+
+
+                            <h4 class="label">Location: </h4>
+
+                            <div class="input-wrapper" id="">
+                                <select name="" id="" class="x-form-input">
+                                    <option value="" disabled selected hidden>Country/Region*</option>
+                                    <option value="">Lorem</option>
+                                    <option value="">Ipsum</option>
+                                    <option value="">Lorem</option>
+                                    <option value="">Ipsum</option>
+                                    <option value="">Lorem</option>
+                                    <option value="">Ipsum</option>
+                                    <option value="">Lorem</option>
+                                    <option value="">Ipsum</option>
+                                    <option value="">Lorem</option>
+                                    <option value="">Ipsum</option>
+                                    <option value="">Lorem</option>
+                                    <option value="">Ipsum</option>
+                                </select>
+                            </div>
+
+                            <div class="input-wrapper" id="preference">
+                                <select name="" id="" class="x-form-input">
+                                    <option value="" disabled selected hidden>State*</option>
+                                    <option value="">Lorem</option>
+                                    <option value="">Ipsum</option>
+                                    <option value="">Lorem</option>
+                                    <option value="">Ipsum</option>
+                                    <option value="">Lorem</option>
+                                    <option value="">Ipsum</option>
+                                    <option value="">Lorem</option>
+                                    <option value="">Ipsum</option>
+                                    <option value="">Lorem</option>
+                                    <option value="">Ipsum</option>
+                                    <option value="">Lorem</option>
+                                    <option value="">Ipsum</option>
+                                </select>
+                            </div>
+
+                            <div class="input-wrapper">
+                                <div class="">
+                                    <input type="text" class="x-form-input" id="" placeholder="Phone Number">
+                                </div>
+                            </div>
+
+                            <div class="x-checkbox">
+                                <input type="checkbox" name="" id=""><span>Set as default delivery address.</span>
+                            </div>
+
+                        </div>
+                    </div>
+                </form>
+
+                <button class="btn submit-form-btn noSelect" id="">Save</button>
+
+            </div>
+
+
+            <button class="btn form-close-btn place-items-center noSelect popup-close-btn" id="popup-close-btn">
+                <i class="ri-close-line"></i>
+            </button>
+
+        </div>
+
     </section>
 
 
@@ -70,6 +193,20 @@
                 localStorage.removeItem("currentTheme");
             }
         });
+
+        // Popup form
+        const popupContainer = selectElement("#popup-form-container");
+        const popupOpenBtn = selectElement("#popup-open-btn");
+        const popupCloseBtn = selectElement("#popup-close-btn");
+
+        popupOpenBtn.addEventListener("click", () =>
+            popupContainer.classList.add("activated")
+        );
+
+        popupCloseBtn.addEventListener("click", () =>
+            popupContainer.classList.remove("activated")
+        );
+
     </script>
 </body>
 

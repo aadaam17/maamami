@@ -203,7 +203,6 @@ const swiper3 = new Swiper(".swiper3", {
 
 /* Scrollmenu switcher */
 const activePage = window.location.pathname;
-console.log(activePage)
 const scrollMenu = document.getElementsByClassName('scrollmenu-link')
 
 Array.from(scrollMenu).forEach((link) => {
