@@ -88,7 +88,8 @@ i {
 }
 
 /* Theme color change */
-body.dark-theme {
+body.dark-theme,
+html.dark-theme {
   --light-color: #fff;
   --light-color-alt: #afb6cd;
   --primary-background-color: #000;
@@ -1349,7 +1350,7 @@ div.scrollmenu a:is(:link, :active, :visited).active {
 
 /* Favorites */
 .p-container .stat {
-  margin: 0 0 5rem .5rem;
+  margin: 0 0 5rem o.5rem;
 }
 
 .favorite-stat span {
@@ -1400,6 +1401,12 @@ div.scrollmenu a:is(:link, :active, :visited).active {
 .setting-x h4,
 .setting-x p {
   padding-top: 2.5rem;
+}
+
+.setting-x.delivery p,
+.setting-x.payment p {
+  font-size: 1.47rem;
+  line-height: 3rem;
 }
 
 /* Settings Items */
@@ -1456,11 +1463,9 @@ div.scrollmenu a:is(:link, :active, :visited).active {
   text-decoration: underline;
 }
 
+/* Payment */
+
 /* Delivery */
-.setting-x.delivery p {
-  font-size: 1.47rem;
-  line-height: 3rem;
-}
 
 /* Popup */
 .popup-form-container {

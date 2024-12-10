@@ -7,6 +7,28 @@ const selectElement = (selector) => {
   );
 };
 
+// Switch theme/add to local storage
+const body = document.body;
+const themeToggleBtn = selectElement("#theme-toggle-btn");
+const currentTheme = localStorage.getItem("currentTheme");
+
+// Check to see if there is a theme preference in local Storage, if so add the ligt theme to the body
+if (currentTheme) {
+  body.classList.add("dark-theme");
+}
+
+themeToggleBtn.addEventListener("click", function () {
+  // Add dark theme on click
+  body.classList.toggle("dark-theme");
+
+  // If the body has the class of light theme then add it to local Storage, if not remove it
+  if (body.classList.contains("dark-theme")) {
+    localStorage.setItem("currentTheme", "themeActive");
+  } else {
+    localStorage.removeItem("currentTheme");
+  }
+});
+
 //Nav styles on scroll
 const scrollHeader = () => {
   const navbarElement = selectElement("#header");
@@ -85,28 +107,6 @@ const openSubMenu = () => {
 };
 
 openSubMenu();
-
-// Switch theme/add to local storage
-const body = document.body;
-const themeToggleBtn = selectElement("#theme-toggle-btn");
-const currentTheme = localStorage.getItem("currentTheme");
-
-// Check to see if there is a theme preference in local Storage, if so add the ligt theme to the body
-if (currentTheme) {
-  body.classList.add("dark-theme");
-}
-
-themeToggleBtn.addEventListener("click", function () {
-  // Add dark theme on click
-  body.classList.toggle("dark-theme");
-
-  // If the body has the class of light theme then add it to local Storage, if not remove it
-  if (body.classList.contains("dark-theme")) {
-    localStorage.setItem("currentTheme", "themeActive");
-  } else {
-    localStorage.removeItem("currentTheme");
-  }
-});
 
 // Swiper 
 const swiper = new Swiper(".swiper1", {
